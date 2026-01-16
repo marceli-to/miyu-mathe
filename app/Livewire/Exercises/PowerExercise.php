@@ -24,37 +24,25 @@ class PowerExercise extends Component
         $this->results = [];
         $this->showResults = false;
 
-        if ($this->mode === 'write_as_power') {
-            // "Schreibe als Potenz" - Convert multiplication to power notation
-            $this->exercises = [
-                ['display' => '5 × 5 × 5 × 5', 'base' => 5, 'exponent' => 4],
-                ['display' => '2 × 2 × 2 × 2 × 2 × 2', 'base' => 2, 'exponent' => 6],
-                ['display' => '9 × 9', 'base' => 9, 'exponent' => 2],
-                ['display' => '4 × 4 × 4', 'base' => 4, 'exponent' => 3],
-                ['display' => '10 × 10 × 10 × 10 × 10', 'base' => 10, 'exponent' => 5],
-            ];
-        } elseif ($this->mode === 'expand') {
-            // "Schreibe ausführlich" - Expand power notation without calculating
-            $this->exercises = [
-                ['base' => 6, 'exponent' => 3, 'answer' => '6 × 6 × 6'],
-                ['base' => 2, 'exponent' => 5, 'answer' => '2 × 2 × 2 × 2 × 2'],
-                ['base' => 8, 'exponent' => 2, 'answer' => '8 × 8'],
-                ['base' => 3, 'exponent' => 4, 'answer' => '3 × 3 × 3 × 3'],
-                ['base' => 11, 'exponent' => 3, 'answer' => '11 × 11 × 11'],
-            ];
-        } else {
-            // "Berechne" - Calculate the result
-            $this->exercises = [
-                ['base' => 2, 'exponent' => 4, 'answer' => 16],
-                ['base' => 5, 'exponent' => 2, 'answer' => 25],
-                ['base' => 3, 'exponent' => 3, 'answer' => 27],
-                ['base' => 10, 'exponent' => 3, 'answer' => 1000],
-                ['base' => 4, 'exponent' => 3, 'answer' => 64],
-            ];
-        }
-
-        foreach ($this->exercises as $index => $exercise) {
-            $this->answers[$index] = ['base' => '', 'exponent' => '', 'value' => ''];
+        for ($i = 0; $i < 5; $i++) {
+            $base = rand(2, 12);
+            $exponent = rand(2, 5);
+            
+            if ($this->mode === 'write_as_power') {
+                // "Schreibe als Potenz" - Convert multiplication to power notation
+                $display = implode(' × ', array_fill(0, $exponent, $base));
+                $this->exercises[] = ['display' => $display, 'base' => $base, 'exponent' => $exponent];
+            } elseif ($this->mode === 'expand') {
+                // "Schreibe ausführlich" - Expand power notation without calculating
+                $answer = implode(' × ', array_fill(0, $exponent, $base));
+                $this->exercises[] = ['base' => $base, 'exponent' => $exponent, 'answer' => $answer];
+            } else {
+                // "Berechne" - Calculate the result
+                $answer = pow($base, $exponent);
+                $this->exercises[] = ['base' => $base, 'exponent' => $exponent, 'answer' => $answer];
+            }
+            
+            $this->answers[$i] = ['base' => '', 'exponent' => '', 'value' => ''];
         }
     }
 
