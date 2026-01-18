@@ -36,6 +36,53 @@
                 <h2 class="text-xl font-semibold text-stone-900 mb-2">Stellenwert</h2>
                 <p class="text-stone-600 text-sm">Löse Stellenwert-Rätsel und finde die fehlenden Zahlen.</p>
             </a>
+
+            {{-- Rearrange --}}
+            <a href="/umstellen" class="group bg-white rounded-2xl border border-stone-200 p-6 hover:border-terracotta-300 hover:shadow-lg transition-all">
+                <div class="w-14 h-14 bg-terracotta-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta-200 transition-colors">
+                    <svg class="w-8 h-8 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                    </svg>
+                </div>
+                <h2 class="text-xl font-semibold text-stone-900 mb-2">Umstellen</h2>
+                <p class="text-stone-600 text-sm">Stelle Rechnungen um, damit sie im Kopf einfacher zu rechnen sind.</p>
+            </a>
+
+            {{-- Order of Operations --}}
+            <a href="/rechnen" class="group bg-white rounded-2xl border border-stone-200 p-6 hover:border-terracotta-300 hover:shadow-lg transition-all">
+                <div class="w-14 h-14 bg-terracotta-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta-200 transition-colors">
+                    <span class="text-xl font-bold text-terracotta-600">+-×:</span>
+                </div>
+                <h2 class="text-xl font-semibold text-stone-900 mb-2">Rechnen</h2>
+                <p class="text-stone-600 text-sm">Rechne Aufgaben mit Punkt vor Strich aus.</p>
+            </a>
+
+            {{-- Distributive Law --}}
+            <a href="/distributiv" class="group bg-white rounded-2xl border border-stone-200 p-6 hover:border-terracotta-300 hover:shadow-lg transition-all">
+                <div class="w-14 h-14 bg-terracotta-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta-200 transition-colors">
+                    <span class="text-lg font-bold text-terracotta-600">a(b+c)</span>
+                </div>
+                <h2 class="text-xl font-semibold text-stone-900 mb-2">Distributiv</h2>
+                <p class="text-stone-600 text-sm">Übe das Distributivgesetz und fülle die Lücken aus.</p>
+            </a>
+
+            {{-- Simplify Brackets --}}
+            <a href="/klammern-vereinfachen" class="group bg-white rounded-2xl border border-stone-200 p-6 hover:border-terracotta-300 hover:shadow-lg transition-all">
+                <div class="w-14 h-14 bg-terracotta-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta-200 transition-colors">
+                    <span class="text-lg font-bold text-terracotta-600">(( ))</span>
+                </div>
+                <h2 class="text-xl font-semibold text-stone-900 mb-2">Klammern vereinfachen</h2>
+                <p class="text-stone-600 text-sm">Entferne unnötige Klammern und berechne das Resultat.</p>
+            </a>
+
+            {{-- Remove Brackets --}}
+            <a href="/klammern-entfernen" class="group bg-white rounded-2xl border border-stone-200 p-6 hover:border-terracotta-300 hover:shadow-lg transition-all">
+                <div class="w-14 h-14 bg-terracotta-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta-200 transition-colors">
+                    <span class="text-lg font-bold text-terracotta-600">( )</span>
+                </div>
+                <h2 class="text-xl font-semibold text-stone-900 mb-2">Klammern entfernen</h2>
+                <p class="text-stone-600 text-sm">Schreibe Rechnungen ohne Klammern mit gleichem Resultat.</p>
+            </a>
         </div>
 
         {{-- Stats or encouragement --}}

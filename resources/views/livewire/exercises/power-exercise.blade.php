@@ -49,14 +49,12 @@
                                   type="number"
                                   wire:model="answers.{{ $index }}.base"
                                   class="w-16 h-12 text-center text-xl font-mono border-2 rounded-lg focus:outline-none transition-colors {{ $showResults ? ($results[$index] ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-stone-300 focus:border-terracotta-500' }}"
-                                  placeholder="?"
-                              >
+                                                                >
                               <input
                                   type="number"
                                   wire:model="answers.{{ $index }}.exponent"
                                   class="w-10 h-8 text-center text-base font-mono border-2 rounded-md focus:outline-none transition-colors -ml-1 -mt-2 {{ $showResults ? ($results[$index] ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-stone-300 focus:border-terracotta-500' }}"
-                                  placeholder="?"
-                              >
+                                                                >
                           </div>
                         </div>
                     @elseif($mode === 'expand')
@@ -79,8 +77,7 @@
                             type="number"
                             wire:model="answers.{{ $index }}.value"
                             class="w-32 h-12 text-center text-xl font-mono border-2 rounded-lg focus:outline-none transition-colors {{ $showResults ? ($results[$index] ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50') : 'border-stone-300 focus:border-terracotta-500' }}"
-                            placeholder="?"
-                        >
+                                                    >
                     @endif
 
                     @if($showResults)

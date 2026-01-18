@@ -55,8 +55,7 @@
                                 {{ $showResults
                                     ? ($results[$puzzleIndex]['x'] ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50')
                                     : 'border-stone-300 focus:border-terracotta-500' }}"
-                            placeholder="?"
-                        >
+                                                    >
                         @if($showResults && !$results[$puzzleIndex]['x'])
                             <span class="text-sm text-red-600">({{ $puzzle['correctX'] }})</span>
                         @elseif($showResults && $results[$puzzleIndex]['x'])
@@ -75,8 +74,7 @@
                                 {{ $showResults
                                     ? ($results[$puzzleIndex]['y'] ? 'border-green-500 bg-green-50' : 'border-red-500 bg-red-50')
                                     : 'border-stone-300 focus:border-terracotta-500' }}"
-                            placeholder="?"
-                        >
+                                                    >
                         @if($showResults && !$results[$puzzleIndex]['y'])
                             <span class="text-sm text-red-600">({{ $puzzle['correctY'] }})</span>
                         @elseif($showResults && $results[$puzzleIndex]['y'])

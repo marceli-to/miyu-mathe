@@ -14,20 +14,20 @@
 </head>
 <body class="bg-stone-50 min-h-screen antialiased">
     <div class="min-h-screen flex flex-col">
+        @unless(request()->is('/'))
         <header>
-            <div class="max-w-4xl mx-auto px-6 py-6">
-                <div class="flex items-center justify-between">
-                    <a href="/" class="text-2xl md:text-3xl font-semibold text-stone-800 tracking-tight">Start</a>
-                    <nav class="flex items-center gap-4 md:gap-6">
-                        <a href="/potenz" class="text-stone-600 hover:text-stone-900 transition-colors text-sm md:text-base">Potenzen</a>
-                        <a href="/vergleichen" class="text-stone-600 hover:text-stone-900 transition-colors text-sm md:text-base">Vergleichen</a>
-                        <a href="/stellenwert" class="text-stone-600 hover:text-stone-900 transition-colors text-sm md:text-base">Stellenwert</a>
-                    </nav>
-                </div>
+            <div class="max-w-4xl mx-auto px-6 pt-4">
+                <a href="/" class="inline-flex items-center gap-1 text-stone-600 hover:text-stone-900 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="text-base font-medium">Start</span>
+                </a>
             </div>
         </header>
+        @endunless
 
-        <main class="flex-1 py-6 md:py-12">
+        <main class="flex-1 pb-6 md:pb-12 md:pt-6">
             <div class="max-w-4xl mx-auto px-4 md:px-6">
                 {{ $slot }}
             </div>
