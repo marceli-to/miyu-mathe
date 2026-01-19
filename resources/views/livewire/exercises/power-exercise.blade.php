@@ -39,7 +39,8 @@
 
         <div class="space-y-5">
             @foreach($exercises as $index => $exercise)
-                <div class="flex items-center justify-between gap-4 border-b-2 border-b-stone-200 pb-4">
+                <div class="flex items-center gap-4 border-b-2 border-b-stone-200 pb-4">
+                    <span class="text-stone-500 font-medium w-8">{{ chr(97 + $index) }})</span>
                     @if($mode === 'write_as_power')
                         <span class="text-xl font-mono text-stone-800 w-1/2">{{ $exercise['display'] }}</span>
                         <div class="flex gap-x-8 items-center">

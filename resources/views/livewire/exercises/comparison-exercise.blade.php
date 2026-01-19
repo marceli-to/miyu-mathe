@@ -9,7 +9,8 @@
     <div class="bg-white rounded-2xl border border-stone-200 p-6 md:p-8">
         <div class="space-y-5">
             @foreach($exercises as $index => $exercise)
-                <div class="flex items-center gap-6 flex-wrap">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <span class="text-stone-500 font-medium w-8">{{ chr(97 + $index) }})</span>
                     {{-- Left side --}}
                     <span class="text-lg font-mono text-stone-800 min-w-[60px] text-right">
                         {{ $exercise['left']['base'] }}<sup>{{ $exercise['left']['exp'] }}</sup>
